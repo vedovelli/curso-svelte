@@ -1,7 +1,13 @@
+<script>
+  export let title = "Can coffee make you a better developer?";
+  export let cover = "/image1.jpg";
+  export let membersOnly = true;
+</script>
+
 <div class="w-full max-w-sm lg:max-w-full lg:flex">
   <div
     class="flex-none h-48 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l"
-    style="background-image: url('/image2.jpg')"
+    style={`background-image: url(${cover})`}
     title="Woman holding a mug" />
   <div
     class="flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r border-gray-400 rounded-b lg:border-l-0 lg:border-t lg:border-gray-400 lg:rounded-b-none lg:rounded-r">
@@ -18,9 +24,7 @@
         </svg>
         Members only
       </p>
-      <div class="mb-2 text-xl font-bold text-gray-900">
-        Can coffee make you a better developer?
-      </div>
+      <div class="mb-2 text-xl font-bold text-gray-900 truncate">{title}</div>
       <p class="text-base text-gray-700">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
