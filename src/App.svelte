@@ -1,7 +1,10 @@
 <script>
-  let count = 0;
+  let timeArray = [];
+  let timeObject = {};
 
-  const clickHandler = () => {};
+  const clickHandler = () => {
+    const d = new Date();
+  };
 </script>
 
 <main class="container mx-auto pt-6">
@@ -13,5 +16,6 @@
       Click me
     </button>
   </div>
-  <p>count: {count}</p>
+  <p>Array: {JSON.stringify(timeArray)}</p>
+  <p>Object: {JSON.stringify(timeObject)}</p>
 </main>
