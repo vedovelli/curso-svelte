@@ -1,7 +1,9 @@
 <script>
   let count = 0;
 
-  const clickHandler = () => {};
+  const clickHandler = () => {
+    count++;
+  };
 </script>
 
 <main class="container mx-auto pt-6">
