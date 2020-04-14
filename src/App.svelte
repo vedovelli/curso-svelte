@@ -1,7 +1,16 @@
 <script>
   let count = 0;
 
-  const clickHandler = () => {};
+  $: if (count === 10) {
+    alert("Contagem está perigosamente alta");
+    count = 9;
+  }
+
+  $: doubled = count * 2;
+
+  const clickHandler = () => {
+    count++;
+  };
 </script>
 
 <main class="container mx-auto pt-6">
@@ -14,4 +23,5 @@
     </button>
   </div>
   <p>count: {count}</p>
+  <p>doubled: {doubled}</p>
 </main>
