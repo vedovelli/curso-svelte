@@ -1,10 +1,18 @@
+<script>
+  export let title = "Um titulo padrão";
+  export let cover = "/image2.jpg";
+</script>
+
 <div class="w-full max-w-sm lg:max-w-full lg:flex">
   <div
-    class="flex-none h-48 overflow-hidden text-center bg-cover rounded-t lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l"
-    style="background-image: url('/image2.jpg')"
+    class="flex-none h-48 overflow-hidden text-center bg-cover rounded-t
+    lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l"
+    style={`background-image: url(${cover})`}
     title="Woman holding a mug" />
   <div
-    class="flex flex-col justify-between p-4 leading-normal bg-white border-b border-l border-r border-gray-400 rounded-b lg:border-l-0 lg:border-t lg:border-gray-400 lg:rounded-b-none lg:rounded-r">
+    class="flex flex-col justify-between p-4 leading-normal bg-white border-b
+    border-l border-r border-gray-400 rounded-b lg:border-l-0 lg:border-t
+    lg:border-gray-400 lg:rounded-b-none lg:rounded-r">
     <div class="mb-8">
       <p class="flex items-center text-sm text-gray-600">
         <svg
@@ -18,9 +26,7 @@
         </svg>
         Members only
       </p>
-      <div class="mb-2 text-xl font-bold text-gray-900">
-        Can coffee make you a better developer?
-      </div>
+      <div class="mb-2 text-xl font-bold text-gray-900">{title}</div>
       <p class="text-base text-gray-700">
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
         quia, nulla! Maiores et perferendis eaque, exercitationem praesentium
