@@ -14,6 +14,7 @@
 <div class="container mx-auto mt-4">
   <div class="grid grid-cols-2 gap-4">
     {#each list as item}
+      {@debug item}
       <Card {...item} />
     {/each}
   </div>
