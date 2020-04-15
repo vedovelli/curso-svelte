@@ -4,6 +4,9 @@
 
   const clickHandler = () => {
     const d = new Date();
+    const key = d.getTime();
+    timeArray = [...timeArray, key];
+    timeObject = { ...timeObject, [key]: d.toLocaleTimeString() };
   };
 </script>
 
