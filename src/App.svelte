@@ -1,5 +1,5 @@
 <script>
-  import prettyPrintJson from "pretty-print-json";
+  import PrettyPrint from "./PrettyPrint.svelte";
 
   let formData = {};
 </script>
@@ -59,7 +59,5 @@
     <button type="submit" class="btn btn-primary">Submit</button>
   </form>
 
-  <div class="output">
-    {@html prettyPrintJson.toHtml(formData)}
-  </div>
+  <PrettyPrint {formData} />
 </div>
