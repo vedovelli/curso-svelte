@@ -1,10 +1,19 @@
 <script>
+  import { createEventDispatcher } from "svelte";
+
   export let title = "Can coffee make you a better developer?";
   export let cover = "/image1.jpg";
   export let membersOnly = false;
+  export let id = 0;
+
+  const dispatch = createEventDispatcher();
+
+  const clickHandler = ev => dispatch("cardClicked", { ev, id });
 </script>
 
-<div class="w-full max-w-sm lg:max-w-full lg:flex">
+<div
+  class="w-full max-w-sm lg:max-w-full lg:flex cursor-pointer"
+  on:click={clickHandler}>
   <div
     class="flex-none h-48 overflow-hidden text-center bg-cover rounded-t
     lg:h-auto lg:w-48 lg:rounded-t-none lg:rounded-l"
