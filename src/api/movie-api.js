@@ -1,1 +1,5 @@
-// https://api.themoviedb.org/3/search/movie?api_key=a1279933de606b4374a2c93a1d0127a9&query=pulp
+import { API_KEY, http } from "./http";
+
+export const fetchMovies = (term) => {
+  return http.get(`movie?api_key=${API_KEY}&query=${term}`);
+};
