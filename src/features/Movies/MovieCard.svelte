@@ -1,3 +1,13 @@
+<script>
+  import { store } from "../../store";
+
+  let quantity = 0;
+
+  store.subscribe(state => {
+    quantity = state.movies.length;
+  });
+</script>
+
 <div class="p-4">
   <div class="flex flex-col md:flex-row">
     <div class="flex-shrink-0">
@@ -9,8 +19,9 @@
     </div>
     <div class="w-full md:ml-6">
       <div
-        class="mt-3 text-sm font-bold tracking-wide text-red-600 uppercase md:mt-0">
-        STAR WARS: THE RISE OF SKYWALKER
+        class="mt-3 text-sm font-bold tracking-wide text-red-600 uppercase
+        md:mt-0">
+        STAR WARS: THE RISE OF SKYWALKER ({quantity})
       </div>
       <div class="flex p-2 my-2 text-xs text-gray-500 bg-gray-100 rounded">
         <p class="w-full">

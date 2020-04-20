@@ -1,7 +1,12 @@
 <script>
+  import { store } from "../../store";
   import MovieCard from "./MovieCard.svelte";
 
-  export let movies = [];
+  let movies = [];
+
+  store.subscribe(state => {
+    movies = state.movies;
+  });
 </script>
 
 <div class="mb-16">
@@ -12,7 +17,8 @@
     <ul class="m-0 xl:grid xl:grid-cols-2">
       {#each movies as movie}
         <li
-          class="p-1 mx-0 my-3 bg-white shadow cursor-pointer xl:mx-3 sm:rounded-lg xl:justify-between">
+          class="p-1 mx-0 my-3 bg-white shadow cursor-pointer xl:mx-3
+          sm:rounded-lg xl:justify-between">
           <MovieCard />
         </li>
       {/each}

@@ -1,12 +1,10 @@
 <script>
-  import { createEventDispatcher } from "svelte";
+  import { fetchMovies } from "../../api/movie-api";
 
   let term = "pulp";
 
-  const dispatch = createEventDispatcher();
-
   const search = async () => {
-    dispatch("doSearch", { term });
+    fetchMovies(term);
   };
 </script>
 
@@ -16,7 +14,8 @@
     class="flex mx-2 mt-1 rounded-md shadow-sm xl:w-1/2 md:mx-auto">
     <div class="relative flex-grow focus-within:z-10">
       <div
-        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        class="absolute inset-y-0 left-0 flex items-center pl-3
+        pointer-events-none">
         <svg
           class="w-5 h-5 text-gray-400"
           fill="currentColor"
@@ -29,12 +28,17 @@
       <input
         bind:value={term}
         type="search"
-        class="block w-full pl-10 transition duration-150 ease-in-out rounded-none form-input rounded-l-md sm:text-sm sm:leading-5"
+        class="block w-full pl-10 transition duration-150 ease-in-out
+        rounded-none form-input rounded-l-md sm:text-sm sm:leading-5"
         placeholder="Digite o título do filme" />
     </div>
     <button
       type="submit"
-      class="relative inline-flex items-center px-4 py-2 -ml-px text-sm font-medium leading-5 text-gray-700 transition duration-150 ease-in-out border border-gray-300 rounded-r-md bg-gray-50 hover:text-gray-500 hover:bg-white focus:outline-none focus:shadow-outline-blue focus:border-blue-300 active:bg-gray-100 active:text-gray-700">
+      class="relative inline-flex items-center px-4 py-2 -ml-px text-sm
+      font-medium leading-5 text-gray-700 transition duration-150 ease-in-out
+      border border-gray-300 rounded-r-md bg-gray-50 hover:text-gray-500
+      hover:bg-white focus:outline-none focus:shadow-outline-blue
+      focus:border-blue-300 active:bg-gray-100 active:text-gray-700">
       <svg
         class="w-6 h-5 text-gray-400"
         viewBox="0 0 20 20"
