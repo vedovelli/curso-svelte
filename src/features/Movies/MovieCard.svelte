@@ -1,11 +1,5 @@
 <script>
-  import { store } from "../../store";
 
-  let quantity = 0;
-
-  store.subscribe(state => {
-    quantity = state.movies.length;
-  });
 </script>
 
 <div class="p-4">
