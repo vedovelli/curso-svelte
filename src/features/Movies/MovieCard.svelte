@@ -15,7 +15,7 @@
       <div
         class="mt-3 text-sm font-bold tracking-wide text-red-600 uppercase
         md:mt-0">
-        STAR WARS: THE RISE OF SKYWALKER ({quantity})
+        STAR WARS: THE RISE OF SKYWALKER
       </div>
       <div class="flex p-2 my-2 text-xs text-gray-500 bg-gray-100 rounded">
         <p class="w-full">
