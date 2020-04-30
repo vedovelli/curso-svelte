@@ -6,8 +6,12 @@
 <main>
   <div class="container mx-auto">
     <div class="md:mx-4">
-      <MovieSearch />
-      <MovieList />
+      <div data-testid="movie-search">
+        <MovieSearch />
+      </div>
+      <div data-testid="movie-list">
+        <MovieList />
+      </div>
     </div>
   </div>
 </main>

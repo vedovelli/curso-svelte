@@ -22,6 +22,7 @@
         out:fly={{ y: 20, duration: 400 }}>
         {#each $movies as movie}
           <li
+            data-testid="movie"
             on:click={setCurrent(movie.id)}
             class:bg-red-200={current === movie.id}
             class="p-1 mx-0 my-3 bg-white shadow cursor-pointer xl:mx-3
