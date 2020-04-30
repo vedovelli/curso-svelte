@@ -6,7 +6,6 @@
   <div class="flex flex-col md:flex-row">
     <div class="flex-shrink-0">
       <img
-        loading="lazy"
         class="rounded-lg md:w-56 md:rounded"
         src="jOzrELAzFxtMx2I4uDGHOotdfsS.jpg"
         alt="Woman paying for a purchase" />
