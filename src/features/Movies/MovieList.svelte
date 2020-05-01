@@ -17,6 +17,7 @@
     {/if}
     {#if $movies.length}
       <ul
+        data-testid="movie-list"
         class="m-0 xl:grid xl:grid-cols-2"
         in:fly={{ y: -20, duration: 400 }}
         out:fly={{ y: 20, duration: 400 }}>
