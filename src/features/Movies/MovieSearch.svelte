@@ -1,5 +1,6 @@
 <script>
   import { fetchMovies, resetMovies } from "../../api/movie-api";
+  import { store } from "../../store";
 
   let term = "";
 
@@ -7,7 +8,7 @@
     fetchMovies(term);
   };
 
-  $: if (term === "") {
+  $: if ($store.wasSearched && term === "") {
     resetMovies();
   }
 </script>
