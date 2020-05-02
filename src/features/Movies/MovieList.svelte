@@ -17,15 +17,16 @@
     {/if}
     {#if $movies.length}
       <ul
+        data-testid="movie-list"
         class="m-0 xl:grid xl:grid-cols-2"
         in:fly={{ y: -20, duration: 400 }}
         out:fly={{ y: 20, duration: 400 }}>
         {#each $movies as movie}
           <li
+            data-testid="movie-item"
             on:click={setCurrent(movie.id)}
             class:bg-red-200={current === movie.id}
-            class="p-1 mx-0 my-3 bg-white shadow cursor-pointer xl:mx-3
-            sm:rounded-lg xl:justify-between">
+            class="p-1 mx-0 my-3 bg-white shadow cursor-pointer xl:mx-3 sm:rounded-lg xl:justify-between">
             <MovieCard {movie} />
           </li>
         {/each}
