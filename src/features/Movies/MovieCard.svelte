@@ -8,14 +8,13 @@
     <div class="flex-shrink-0">
       <img
         class="rounded-lg md:w-56 md:rounded"
-        src={`${BACKDROP_BASE_URL}/${movie.backdrop_path}`}
+        src={`${BACKDROP_BASE_URL}${movie.backdrop_path}`}
         alt={`Poster: ${movie.title}`}
         title={`Poster: ${movie.title}`} />
     </div>
     <div class="w-full md:ml-6">
       <div
-        class="mt-3 text-sm font-bold tracking-wide text-red-600 uppercase
-        md:mt-0">
+        class="mt-3 text-sm font-bold tracking-wide text-red-600 uppercase md:mt-0">
         {movie.title}
       </div>
       <div class="flex p-2 my-2 text-xs text-gray-500 bg-gray-100 rounded">
