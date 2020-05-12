@@ -1,3 +1,9 @@
+# Curso de Svelte do Vedovelli
+
+Este repositório contém o código-fonte escrito durante o curso de Svelte. O curso é gratuito e pode ser acessado aqui: https://classes.vedovelli.com.br/?class=curso-de-svelte-introducao
+
+---
+
 *Looking for a shareable component template? Go here --> [sveltejs/component-template](https://github.com/sveltejs/component-template)*
 
 ---
